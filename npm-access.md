@@ -36,17 +36,17 @@ npm access edit [<package>]
 
 
 ## DETAILS 详解
-`npm access` 总是直接作用于当前注册表，在命令行使用 `--registry=<registry url>` 进行配置。
+`npm access` 总是直接作用于当前注册表，在命令行使用 `--registry=<registry url>` 进行配置。
 
 无作用域包*始终是公开的*。
 (译者注：作用域包和非作用域包说明请参考[npm-scope(7)](https://docs.npmjs.com/misc/scope))
 
-作用域包*默认是受限制的*，但是你也可以使用 `npm publish --access=public` 命令来发布它们，或者在它们被初次发布后使用 `npm access public` 命令来将其的访问权限设置为公开。
+作用域包*默认是受限制的*，但是你也可以使用 `npm publish --access=public` 命令来发布它们，或者在它们被初次发布后使用 `npm access public` 命令来将其的访问权限设置为公开。
 （译者注：例如 `@angular/core` 这个包就是作用域包设置为公开）
 
 你必须有设置包的访问权限：
 * 你是无作用域或作用域包的所有者。
-* 你是拥有作用域的团队成员。
+* 你是拥有作用域的团队成员。
 * 你已获得包的读写权限，无论是作为一个团队的一员，或是其所有者。
 
 如果你的帐户没有支付（译者注：`private modules` 付费用户），除非你使用 `--access=public`命令，否则在你尝试发布作用域包时
