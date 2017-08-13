@@ -54,7 +54,7 @@ npm access edit [<package>]
 
 团队和团队成员的管理是通过 `npm team` 命令完成的。
 
-## SEE ALSO 请参阅
+## SEE ALSO 亦可参阅
 * [npm-team(1)](https://docs.npmjs.com/cli/team)
 * [npm-publish(1)](https://docs.npmjs.com/cli/publish)
 * [npm-config(7)](https://docs.npmjs.com/misc/config)
