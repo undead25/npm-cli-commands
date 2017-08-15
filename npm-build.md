@@ -1,5 +1,6 @@
 npm-build(1) -- 构建一个包
 ===============================
+基于 [npm-build(1)](https://github.com/npm/npm/blob/latest/doc/cli/npm-build.md) 官方文档翻译版本
 
 ## SYNOPSIS 概要
 ```

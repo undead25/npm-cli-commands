@@ -1,6 +1,6 @@
 npm-bugs(1) -- 包在 web 浏览器中可能出现的错误
 ========================================================
-
+基于 [npm-bugs(1)](https://github.com/npm/npm/blob/latest/doc/cli/npm-bugs.md) 官方文档翻译版本
 
 ## SYNOPSIS 概要
 ```bash
