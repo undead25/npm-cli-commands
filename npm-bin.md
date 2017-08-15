@@ -2,9 +2,9 @@ npm-bin(1) -- Display npm bin folder
 ====================================
 
 ## SYNOPSIS
-
-    npm bin [-g|--global]
-
+```bash
+npm bin [-g|--global]
+```
 ## DESCRIPTION
 
 Print the folder where npm will install executables.
