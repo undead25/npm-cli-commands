@@ -1,19 +1,26 @@
-npm-bin(1) -- Display npm bin folder
+npm-bin(1) -- 显示 npm bin 文件夹
 ====================================
+基于 [npm-bin(1)](https://github.com/npm/npm/blob/latest/doc/cli/npm-bin.md) 官方文档翻译版本
 
-## SYNOPSIS
+## SYNOPSIS 概要
 ```bash
 npm bin [-g|--global]
 ```
-## DESCRIPTION
 
-Print the folder where npm will install executables.
+## DESCRIPTION 描述 
 
-## SEE ALSO
+打印 npm 将安装可执行文件的文件夹。
 
-* npm-prefix(1)
-* npm-root(1)
-* npm-folders(5)
-* npm-config(1)
-* npm-config(7)
-* npmrc(5)
+译者注：
+```bash
+npm bin -g
+/usr/local/bin  # mac print
+```
+
+## SEE ALSO 亦可参阅
+* [npm-prefix(1)](https://docs.npmjs.com/cli/prefix)
+* [npm-root(1)](https://docs.npmjs.com/cli/root)
+* [npm-folders(5)](https://docs.npmjs.com/files/folders)
+* [npm-config(1)](https://docs.npmjs.com/cli/config)
+* [npm-config(7)](https://docs.npmjs.com/misc/config)
+* [npmrc(5)](https://docs.npmjs.com/files/npmrc)
