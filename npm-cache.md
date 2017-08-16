@@ -56,7 +56,7 @@ npm 缓存严格来说是一个缓存：它不应该依赖于持久可靠的数�
 
 ## SEE ALSO 亦可参阅
 
-* npm-folders(5)
+* [npm-folders(5)](https://docs.npmjs.com/files/folders)
 * [npm-config(1)](https://docs.npmjs.com/cli/config)
 * [npm-config(7)](https://docs.npmjs.com/misc/config)
 * [npmrc(5)](https://docs.npmjs.com/files/npmrc)
