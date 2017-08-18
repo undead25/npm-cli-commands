@@ -1,5 +1,6 @@
-npm-dedupe(1) -- Reduce duplication
+npm-dedupe(1) -- 减少重复
 ===================================
+基于 [npm-dedupe(1)](https://github.com/npm/npm/blob/latest/doc/cli/npm-dedupe.md) 官方文档翻译版本
 
 ## SYNOPSIS
 
@@ -29,24 +30,17 @@ In this case, `npm-dedupe(1)` will transform the tree to:
     +-- d
     `-- c@1.0.10
 
-Because of the hierarchical nature of node's module lookup, b and d
-will both get their dependency met by the single c package at the root
-level of the tree.
+Because of the hierarchical nature of node's module lookup, b and d will both get their dependency met by the single c package at the root level of the tree.
 
-The deduplication algorithm walks the tree, moving each dependency as far
-up in the tree as possible, even if duplicates are not found. This will
-result in both a flat and deduplicated tree.
+The deduplication algorithm walks the tree, moving each dependency as far up in the tree as possible, even if duplicates are not found. This will result in both a flat and deduplicated tree.
 
-If a suitable version exists at the target location in the tree
-already, then it will be left untouched, but the other duplicates will
-be deleted.
+If a suitable version exists at the target location in the tree already, then it will be left untouched, but the other duplicates will be deleted.
 
 Arguments are ignored. Dedupe always acts on the entire tree.
 
 Modules
 
-Note that this operation transforms the dependency tree, but will never
-result in new modules being installed.
+Note that this operation transforms the dependency tree, but will never result in new modules being installed.
 
 ## SEE ALSO
 
