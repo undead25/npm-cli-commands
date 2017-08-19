@@ -3,11 +3,12 @@ npm-dedupe(1) -- 减少重复
 基于 [npm-dedupe(1)](https://github.com/npm/npm/blob/latest/doc/cli/npm-dedupe.md) 官方文档翻译版本
 
 ## SYNOPSIS
+```bash
+npm dedupe
+npm ddp
 
-    npm dedupe
-    npm ddp
-
-    aliases: find-dupes, ddp
+aliases: find-dupes, ddp
+```
 
 ## DESCRIPTION
 
