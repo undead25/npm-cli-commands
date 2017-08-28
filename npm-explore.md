@@ -2,7 +2,7 @@ npm-explore(1) -- 浏览已安装的包
 =============================================
 基于 [npm-explore(1)](https://github.com/npm/npm/blob/latest/doc/cli/npm-explore.md) 官方文档翻译版本
 
-## SYNOPSIS 概述
+## SYNOPSIS 概要
 ```bash
 npm explore <pkg> [ -- <command>]
 ```

@@ -2,7 +2,7 @@ npm-init(1) -- 交互式创建一个 package.json 文件
 =======================================================
 基于 [npm-init(1)](https://github.com/npm/npm/blob/latest/doc/cli/npm-init.md) 官方文档翻译版本
 
-## SYNOPSIS
+## SYNOPSIS 概要
 ```bash
 npm init [-f|--force|-y|--yes]
 ```

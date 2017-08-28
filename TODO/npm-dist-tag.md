@@ -14,21 +14,18 @@ aliases: dist-tags
 
 ## DESCRIPTION 描述
 
-添加、删除和枚举包的分发标签：
+添加、删除和列出包的分发标签：
 
 * `add`：
-  Tags the specified version of the package with the specified tag, or the
-  `--tag` config if not specified.
+  Tags the specified version of the package with the specified tag, or the `--tag` config if not specified.
 
 * `rm`：
   Clear a tag that is no longer in use from the package.
 
 * `ls`：
-  Show all of the dist-tags for a package, defaulting to the package in
-  the current prefix.
+  Show all of the dist-tags for a package, defaulting to the package in the current prefix.
 
-A tag can be used when installing packages as a reference to a version instead
-of using a specific version number:
+A tag can be used when installing packages as a reference to a version instead of using a specific version number:
 
 ```bash
 npm install <name>@<tag>
