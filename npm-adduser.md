@@ -12,15 +12,15 @@ aliases: login, add-user
 
 
 ## DESCRIPTION 描述
-在指定的注册表中创建或验证名为 `<username>` 的用户，并将凭证保存在 `.npmrc` 文件中。如果未指定注册表，那么将使用默认的注册表（参考 [`npm-config(7)`](https://docs.npmjs.com/misc/config)）
+在指定的注册表中创建或验证名为 `<username>` 的用户，并将凭证保存在 `.npmrc` 文件中。如果未指定注册表，那么将使用默认的注册表（参考 [`npm-config(7)`](https://docs.npmjs.com/misc/config)）
 
-在提示中读取用户名、密码和邮箱。
+在提示中读取用户名、密码和邮箱。
 
 需要重置密码请转到 <https://www.npmjs.com/forgot>
 
 需要修改邮箱地址请转到 <https://www.npmjs.com/email-edit>
 
-你可以使用同一账户多次使用此命令来授权新的机器。在新机器上进行身份验证时，用户名，密码和邮箱地址必须与现有记录相匹配。
+你可以使用同一账户多次使用此命令来授权新的机器。在新机器上进行身份验证时，用户名，密码和邮箱地址必须与现有记录相匹配。
 
 `npm login` 是 `adduser` 的别名，行为方式完全相同。
 
@@ -44,7 +44,7 @@ npm adduser --registry=http://myregistry.example.com --scope=@myco
 ### always-auth 始终验证
 默认：`false`
 
-如果指定，保存配置意味着对给定注册表的所有请求都将包含授权信息。这适用于私有注册表。也可以配合 `--registry` 和/或 `--scope` 使用，例如：
+如果指定，保存配置意味着对给定注册表的所有请求都将包含授权信息。这适用于私有注册表。也可以配合 `--registry` 和/或 `--scope` 使用，例如：
 
 ```bash
 npm adduser --registry=http://private-registry.example.com --always-auth
@@ -55,7 +55,7 @@ npm adduser --registry=http://private-registry.example.com --always-auth
 * 默认：`'legacy'`
 * 类型：`'legacy'`、`'sso'`、`'saml'`、`'oauth'`
 
-与 `adduser` /`login` 一起使用何种认证策略。除了传统 npm 中经典的用户名/密码输入外，某些 npm 注册表（例如，npmE）可能会支持备用验证策略。
+与 `adduser` /`login` 一起使用何种认证策略。除了传统 npm 中经典的用户名/密码输入外，某些 npm 注册表（例如，npmE）可能会支持备用验证策略。
 
 
 ## SEE ALSO 亦可参阅
