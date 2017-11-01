@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [前言](README.md)
 * [access](npm-access.md)
 * [adduser](npm-adduser.md)
 * [bin](npm-bin.md)
@@ -35,6 +35,7 @@
 * [repo](npm-repo.md)
 * [restart](npm-restart.md)
 * [root](npm-root.md)
+* [run-script](npm-run-script.md)
 * [search](npm-search.md)
 * [shrinkmap](npm-shrinkmap.md)
 * [star](npm-star.md)
