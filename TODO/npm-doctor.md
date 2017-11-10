@@ -1,59 +1,59 @@
-npm-doctor(1) -- Check your environments
+npm-doctor(1) -- 检查你的环境
 ========================================================
 
-## SYNOPSIS
+## SYNOPSIS 概要
 ```
 npm doctor
 ```
 
-## DESCRIPTION
+## DESCRIPTION 描述
 
-`npm doctor` runs a set of checks to ensure that your npm installation has what it needs to manage your JavaScript packages. npm is mostly a standalone tool, but it does have some basic requirements that must be met:
+`npm doctor` 运行一系列检查来确保 npm 安装了你的 JavaScript 包所需要的东西。npm 主要是一个独立的工具，但它有一些必须要满足的基本需求：
 
-- Node.js and git must be executable by npm.
-- The primary npm registry, `registry.npmjs.com`, or another service that uses the registry API, is available.
-- The directories that npm uses, `node_modules` (both locally and globally), exist and can be written by the current user.
-- The npm cache exists, and the package tarballs within it aren't corrupt.
+- Node.js 和 git 必须可以由 npm 执行。
+- 主要 npm 注册表，`registry.npmjs.com` 或其他使用注册表 API 的可用服务。
+- npm 使用的目录，`node_modules`（本地和全局）都存在，并且可以由当前用户写入。
+- npm 缓存存在，并且里面的包的压缩包没有损坏。
 
-Without all of these working properly, npm may not work properly.  Many issues are often attributable to things that are outside npm's code base, so `npm doctor` confirms that the npm installation is in a good state.
+这些工作异常，npm 可能无法正常工作。很多问题通常都是由 npm 代码之外的东西引起的，所以 `npm doctor` 来确认 npm 的安装状态良好。
 
-Also, in addition to this, there are also very many issue reports due to using old versions of npm. Since npm is constantly improving, running `npm@latest` is better than an old version.
+除此之外，使用旧版本的 npm 也会有很多问题报告。由于 npm 不断更新，所以运行 `npm@latest` 会比使用旧版本更好。
 
-`npm doctor` verifies the following items in your environment, and if there are any recommended changes, it will display them.
+`npm doctor` 会检查环境中下方列出的项，如果有推荐的变更也会显示。
 
 ### `npm ping`
 
-By default, npm installs from the primary npm registry, `registry.npmjs.org`. `npm doctor` hits a special ping endpoint within the registry. This can also be checked with `npm ping`. If this check fails, you may be using a proxy that needs to be configured, or may need to talk to your IT staff to get access over HTTPS to `registry.npmjs.org`.
+默认情况下，npm 从主 npm 注册表 `registry.npmjs.org` 安装。`npm doctor` 在注册表中调一个特殊的 ping 端点。这也可以用 `npm ping` 来检查。如果此检查失败，则你可能需要配置正在使用的代理，或者与 IT 人员沟通，才能通过 HTTPS 访问 `registry.npmjs.org`。
 
-This check is done against whichever registry you've configured (you can see what that is by running `npm config get registry`), and if you're using a private registry that doesn't support the `/whoami` endpoint supported by the primary registry, this check may fail.
+这个检查是根据你配置的注册表来完成的（你可以通过运行 `npm config get registry` 来看看是什么），如果你使用的注册表不支持主注册表支持的 `/whoami` 端点，这个检查可能会失败。
 
 ### `npm -v`
 
-While Node.js may come bundled with a particular version of npm, it's the policy of the CLI team that we recommend all users run `npm@latest` if they can. As the CLI is maintained by a small team of contributors, there are only resources for a single line of development, so npm's own long-term support releases typically only receive critical security and regression fixes. The team believes that the latest tested version of npm is almost always likely to be the most functional and defect-free version of npm.
+虽然 Node.js 可能捆绑了特定版本的 npm，但是我们建议所有用户运行 npm@latest，这是 CLI 团队的策略。由于 CLI 是由一小部分贡献者维护的，因此只有单一的开发资源，所以 npm 自己长期支持的版本通常只能得到重要的安全性和回归修复。该团队认为，最新测试过的 npm 版本几乎总是功能最强大，无瑕疵的版本。
 
 ### `node -v`
 
-For most users, in most circumstances, the best version of Node will be the latest long-term support (LTS) release. Those of you who want access to new ECMAscript features or bleeding-edge changes to Node's standard library may be running a newer version, and some of you may be required to run an older version of Node because of enterprise change control policies. That's OK! But in general, the npm team recommends that most users run Node.js LTS.
+对于大多数用户来说，在大多数情况下，最好的 Node 版本将是最新的长期支持（LTS）版本。那些想要访问新的 ECMAscript 特性或对 Node 的标准库进行最新改动的用户可能正在运行一个更加新的版本上，并且由于企业变更控制策略的原因，可能会要求运行旧版本的 Node。没关系！但总的来说，npm 团队建议大多数用户使用 Node.js LTS。
 
 ### `npm config get registry`
 
-Some of you may be installing from private package registries for your project or company. That's great! Others of you may be following tutorials or StackOverflow questions in an effort to troubleshoot problems you may be having. Sometimes, this may entail changing the registry you're pointing at. This part of `npm doctor` just lets you, and maybe whoever's helping you with support, know that you're not using the default registry.
+有些人可能会从项目或者公司的私有包注册表中安装。那很棒！有些人可能会跟随教程或者 StackOverflow 上的问题，来解决可能遇到的问题。有时候，这可能需要改变你指向的注册表。`npm doctor` 只是让你知道你没有使用默认的注册表。
 
 ### `which git`
 
-While it's documented in the README, it may not be obvious that npm needs Git installed to do many of the things that it does. Also, in some cases – especially on Windows – you may have Git set up in such a way that it's not accessible via your `PATH` so that npm can find it. This check ensures that Git is available.
+尽管在自述文件中有记录，但可能并不明显的是 npm 需要安装 Git 来完成许多事情。另外，在某些情况下（特别是在 Windows 上），你可能会将 Git 设置为无法通过 `PATH` 访问，以便 npm 可以找到它。这个检查确保 Git 可用。
 
-### Permissions checks
+### 权限检查
 
-* Your cache must be readable and writable by the user running npm.
-* Global package binaries must be writable by the user running npm.
-* Your local `node_modules` path, if you're running `npm doctor` with a project directory, must be readable and writable by the user running npm.
+* 运行 npm 的用户必须可以读取和写入缓存。
+* 运行 npm 的用户必须可以写入全局包二进制文件。
+* 如果你在项目目录中运行 `npm doctor`，运行 npm 的用户可以可以读写本地 `node_modules` 目录。
 
-### Validate the checksums of cached packages
+### 验证缓存包的校验
 
-When an npm package is published, the publishing process generates a checksum that npm uses at install time to verify that the package didn't get corrupted in transit. `npm doctor` uses these checksums to validate the package tarballs in your local cache (you can see where that cache is located with `npm config get cache`, and see what's in that cache with `npm cache ls` – probably more than you were expecting!). In the event that there are corrupt packages in your cache, you should probably run `npm cache clean` and reset the cache.
+发布 npm 包时，发布过程会生成一个校验和，npm 会在安装时使用它来验证包在传输过程中是否损坏。`npm doctor` 使用这些校验和来验证本地缓存中的包压缩文件（你可以通过 `npm config get cache` 看到这个缓存的位置，然后用 `npm cache ls` 来查看缓存里有什么 —— 可能会超过你的预期！）。如果缓存中存在损坏的包，则应该运行`npm cache clean` 并重置缓存。
 
-## SEE ALSO
-* npm-bugs(1)
-* npm-help(1)
-* npm-ping(1)
+## SEE ALSO 亦可参阅
+* [npm-bugs(1)](https://docs.npmjs.com/cli/bugs)
+* [npm-help(1)](https://docs.npmjs.com/cli/help)
+* [npm-ping(1)](https://docs.npmjs.com/cli/ping)
