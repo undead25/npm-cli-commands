@@ -14,6 +14,7 @@
 * [deprecate](npm-deprecate.md)
 * [dist-tag](npm-dist-tag.md)
 * [docs](npm-docs.md)
+* [doctor](npm-doctor.md)
 * [edit](npm-edit.md)
 * [explore](npm-explore.md)
 * [help-search](npm-help-search.md)
