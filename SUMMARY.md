@@ -25,6 +25,7 @@
 * [link](npm-link.md)
 * [logout](npm-logout.md)
 * [ls](npm-ls.md)
+* [npm](npm.md)
 * [outdated](npm-outdated.md)
 * [owner](npm-owner.md)
 * [pack](npm-pack.md)

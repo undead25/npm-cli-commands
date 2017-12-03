@@ -72,20 +72,19 @@ npm 是 Node JavaScript 平台的包管理器。它将模块放在合适的地�
 npm 具有灵活的配置，从 5 个地方读取其配置选项。
 
 * 命令行开关：
-  Set a config with `--key val`.  All keys take a value, even if they are booleans (the config parser doesn't know what the options are at the time of parsing.)  If no value is provided, then the option is set to boolean `true`.
+  用 `--key val` 设置一个配置。所有的键都有一个值，即使它们是布尔值（配置解析器不知道解析时的选项是什么）。如果没有提供值，那么该选项会被设置为布尔值 `true`。
 
 * 环境变量：
-  Set any config by prefixing the name in an environment variable with `npm_config_`.  For example, `export npm_config_key=val`.
+  通过 `npm_config_` 在环境变量中加上前缀来设置配置。例如 `export npm_config_key=val`。
 
 * 用户配置：
-  The file at $HOME/.npmrc is an ini-formatted list of configs. If present, it is parsed.  If the `userconfig` option is set in the cli or env, then that will be used instead.
+  $HOME/.npmrc 中的文件是一个 ini 格式的配置列表。如果存在，则进行解析。如果在 cli 或 env 中设置了 `userconfig` 选项，那么将会使用它。
 
 * 全局配置：
-  The file found at ../etc/npmrc (from the node executable, by default this resolves to /usr/local/etc/npmrc) will be parsed if it is found.
-  If the `globalconfig` option is set in the cli, env, or user config, then that file is parsed instead.
+  在 ../etc/npmrc 找到的文件（从 node 可执行文件中，默认情况下会被解析为 /usr/local/etc/npmrc）将被解析。如果在 cli、env 或者 user config 中设置了 `globalconfig` 选项，那么就会解析这个文件。
 
 * 默认：
-  npm's default configuration options are defined in lib/utils/config-defs.js.  These must not be changed.
+  npm 的默认配置选项是在 lib/utils/config-defs.js 中定义的。这些配置不能被改变。
 
 更多信息参见 [`npm-config(7)`](https://docs.npmjs.com/misc/config)。
 
@@ -94,10 +93,10 @@ npm 具有灵活的配置，从 5 个地方读取其配置选项。
 欢迎贡献！
 
 * 代码：
-  Read through `npm-coding-style(7)` if you plan to submit code. You don't have to agree with it, but you do have to follow it.
+  如果你打算提交代码，请阅读 [`npm-coding-style(7)`](https://docs.npmjs.com/misc/coding-style)。你不必同意，但你必须遵循它。
 
 * 文档：
-  If you find an error in the documentation, edit the appropriate markdown file in the "doc" folder.  (Don't worry about generating the man page.)
+  如果在文档中发现错误，请在 `doc` 文件夹中编辑相应的 markdown 文件。（不要担心会生成手册页。）
 
 贡献者列在 npm 的 `package.json` 文件中，可以通过 `npm view npm contributors` 来查看。
 
@@ -108,17 +107,15 @@ npm 具有灵活的配置，从 5 个地方读取其配置选项。
 
 ## BUGS
 
-When you find issues, please report them:
+当你发现问题，请报告给我们：
 
-* web:
-  <https://github.com/npm/npm/issues>
+* web：<https://github.com/npm/npm/issues>
 
-Be sure to include *all* of the output from the npm command that didn't work as expected.  The `npm-debug.log` file is also helpful to provide.
+确保包含 npm 命令不能按预期工作所输出的**所有**内容。提供 `npm-debug.log` 文件也是有帮助的。
 
-You can also look for isaacs in #node.js on irc://irc.freenode.net.  He will no doubt tell you to put the output in a gist or email.
+你也可以在 irc://irc.freenode.net 上的 #node.js 中找到 isaacs。他毫无疑问会告诉你把输出结果放在 gist 上或者电子邮件中。
 
 ## AUTHOR 作者
-
 [Isaac Z. Schlueter](http://blog.izs.me/) ::
 [isaacs](https://github.com/isaacs/) ::
 [@izs](http://twitter.com/izs) ::
