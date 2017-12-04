@@ -1,27 +1,32 @@
-npm-version(1) -- Bump a package version
+npm-version(1) -- 控制包版本？
 ========================================
 
-## SYNOPSIS
+## SYNOPSIS 概要
+```
+npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]
 
-    npm version [<newversion> | major | minor | patch | premajor | preminor | prepatch | prerelease | from-git]
+'npm [-v | --version]' to print npm version
+'npm view <pkg> version' to view a package's published version
+'npm ls' to inspect current package/dependency versions
+```
 
-    'npm [-v | --version]' to print npm version
-    'npm view <pkg> version' to view a package's published version
-    'npm ls' to inspect current package/dependency versions
 
-## DESCRIPTION
-
+## DESCRIPTION 描述
 Run this in a package directory to bump the version and write the new data back to `package.json` and, if present, `npm-shrinkwrap.json`.
+在包目录中运行这个命令来打包版本并将新的数据写到 `package.json`，如果存在的话 `npm-shrinkwrap.json`？。
 
-The `newversion` argument should be a valid semver string, a valid second argument to [semver.inc](https://github.com/npm/node-semver#functions) (one of `patch`, `minor`, `major`, `prepatch`, `preminor`, `premajor`, `prerelease`), or `from-git`. In the second case, the existing version will be incremented by 1 in the specified field. `from-git` will try to read the latest git tag, and use that as the new npm version.
+`newversion` 参数应该是一个有效的语义化版本字符串。[semver.inc](https://github.com/npm/node-semver#functions) 第二个有效的参数是 `patch`、`minor`、`major`、`prepatch`、`preminor`、`premajor`、`prerelease` 其中之一或者 `from-git`。在第二种情况下，会在现有版本的指定字段上加 1。`from-git` 将尝试读取最新的 git 标签，并使用它作为新的 npm 版本。
 
-If run in a git repo, it will also create a version commit and tag. This behavior is controlled by `git-tag-version` (see below), and can be disabled on the command line by running `npm --no-git-tag-version version`. It will fail if the working directory is not clean, unless the `-f` or `--force` flag is set.
+如果在 git 仓库中运行，它也会创建一个版本提交和标签。这个行为是由 `git-tag-version`（见下面）控制的，可以通过运行 `npm --no-git-tag-version version` 在命令行中禁用它。如果工作目录不整洁，将会失败，除非设置了 `-f` 或者 `force` 标志。
 
-If supplied with `-m` or `--message` config option, npm will use it as a commit message when creating a version commit.  If the `message` config contains `%s` then that will be replaced with the resulting version number. For example:
+如果提供了 `-m` 或 `--message` 配置选项，npm 将在创建版本提交时将其作为提交信息。如果 `message` 配置包含 `％s`，那么它将被替换为生成的版本号。例如：
+
 ```bash
 npm version patch -m "Upgrade to %s for reasons"
 ```
-If the `sign-git-tag` config is set, then the tag will be signed using the `-s` flag to git.  Note that you must have a default GPG key set up in your git config for this to work properly.  For example:
+
+如果设置了 `sign-git-tag` 配置，那么标签将使用 `-s` 标志来进行签名。请注意，你必须在你的 git 配置中设置默认的 GPG 密钥才能正常工作。例如：
+
 ```bash
 $ npm config set sign-git-tag true
 $ npm version patch
@@ -32,7 +37,8 @@ user: "isaacs (http://blog.izs.me/) <i@izs.me>"
 
 Enter passphrase:
 ```
-If `preversion`, `version`, or `postversion` are in the `scripts` property of the package.json, they will be executed as part of running `npm version`.
+
+如果 `preversion`、`version` 或者 `postversion` 在 package.json 的 `scripts` 属性中，它们将作为运行 `npm version` 的一部分被执行。
 
 The exact order of execution is as follows:
   1. Check to make sure the git working directory is clean before we get started. Your scripts may add files to the commit in future steps. This step is skipped if the `--force` flag is set.
@@ -42,7 +48,8 @@ The exact order of execution is as follows:
   5. Commit and tag.
   6. Run the `postversion` script. Use it to clean up the file system or automatically push the commit and/or tag.
 
-Take the following example:
+看下面的例子：
+
 ```json
   "scripts": {
     "preversion": "npm test",
@@ -50,9 +57,10 @@ Take the following example:
     "postversion": "git push && git push --tags && rm -rf build/temp"
   }
 ```
+
 This runs all your tests, and proceeds only if they pass. Then runs your `build` script, and adds everything in the `dist` directory to the commit. After the commit, it pushes the new commit and tag up to the server, and deletes the `build/temp` directory.
 
-## CONFIGURATION
+## CONFIGURATION 配置
 
 ### allow-same-version
 
@@ -84,10 +92,10 @@ Pass the `-s` flag to git to sign the tag.
 
 Note that you must have a default GPG key set up in your git config for this to work properly.
 
-## SEE ALSO
-* npm-init(1)
-* npm-run-script(1)
-* npm-scripts(7)
-* package.json(5)
-* semver(7)
-* config(7)
+## SEE ALSO 亦可参阅
+* [npm-init(1)](https://docs.npmjs.com/cli/init)
+* [npm-run-script(1)](https://docs.npmjs.com/cli/run-script)
+* [npm-scripts(7)](https://docs.npmjs.com/misc/scripts)
+* [package.json(5)](https://docs.npmjs.com/files/package.json)
+* [semver(7)](https://docs.npmjs.com/misc/semver)
+* [config(7)](https://docs.npmjs.com/misc/config)
