@@ -49,5 +49,6 @@
 * [uninstall](npm-uninstall.md)
 * [unpublish](npm-unpublish.md)
 * [update](npm-update.md)
+* [version](npm-version.md)
 * [view](npm-view.md)
 * [whoami](npm-whoami.md)
