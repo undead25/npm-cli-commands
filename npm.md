@@ -1,5 +1,6 @@
 npm(1) -- JavaScript 包管理器
 ====================================
+基于 [npm(1)](https://github.com/npm/npm/blob/latest/doc/cli/npm.md) 官方文档翻译版本
 
 ## SYNOPSIS 概要
 ```bash
@@ -107,9 +108,9 @@ npm 具有灵活的配置，从 5 个地方读取其配置选项。
 
 ## BUGS
 
-当你发现问题，请报告给我们：
+当你发现问题时，请上报给我们：
 
-* web：<https://github.com/npm/npm/issues>
+* 网站：<https://github.com/npm/npm/issues>
 
 确保包含 npm 命令不能按预期工作所输出的**所有**内容。提供 `npm-debug.log` 文件也是有帮助的。
 
@@ -123,7 +124,7 @@ npm 具有灵活的配置，从 5 个地方读取其配置选项。
 
 ## SEE ALSO 亦可参阅
 * [npm-help(1)](https://docs.npmjs.com/cli/help)
-* README
+* [README](https://github.com/npm/npm/blob/latest/README.md)
 * [package.json(5)](https://docs.npmjs.com/files/package.json)
 * [npm-install(1)](https://docs.npmjs.com/cli/install)
 * [npm-config(1)](https://docs.npmjs.com/cli/config)

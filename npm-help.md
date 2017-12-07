@@ -27,7 +27,7 @@ npm help <term> [<terms..>]
 ## SEE ALSO 亦可参阅
 
 * [npm(1)](https://docs.npmjs.com/cli/npm)
-* README
+* [README](https://github.com/npm/npm/blob/latest/README.md)
 * [npm-folders(5)](https://docs.npmjs.com/files/folders)
 * [npm-config(1)](https://docs.npmjs.com/cli/config)
 * [npm-config(7)](https://docs.npmjs.com/misc/config)

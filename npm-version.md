@@ -1,5 +1,6 @@
 npm-version(1) -- 打包版本
 ========================================
+基于 [npm-version(1)](https://github.com/npm/npm/blob/latest/doc/cli/npm-version.md) 官方文档翻译版本
 
 ## SYNOPSIS 概要
 ```
