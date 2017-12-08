@@ -17,37 +17,37 @@ npm(1) -- 一个 JavaScript 包管理器
 
 **你需要 v4 或者更高版本的 node 来运行 npm**
 
-To install an old **and unsupported** version of npm that works on node v0.12 and prior, clone the git repo and dig through the old tags and branches.
+要在 node v0.12 以及之前版本上安装的旧的**和不再支持的** npm 版本，请克隆 git 仓库，然后通过旧的标签和分支找到对应的版本。
 
-**npm is configured to use npm, Inc.'s public package registry at <https://registry.npmjs.org> by default.**
+**npm 默认配置为使用 npm 公司的公共包注册表 <https://registry.npmjs.org>。**
 
-You can configure npm to use any compatible registry you like, and even run your own registry. Check out the [doc on registries](https://docs.npmjs.com/misc/registry).
+你可以通过配置来使用任何你喜欢的兼容的注册表，甚至运行你自己的注册表。请查看[注册表文档](https://docs.npmjs.com/misc/registry)。
 
-Use of someone else's registry may be governed by terms of use. The terms of use for the default public registry are available at <https://www.npmjs.com>.
+使用他人的注册表可能受使用条款的约束。默认公共注册表的使用条款请参见  <https://www.npmjs.com>。
 
-## Super Easy Install
+## 超级简易安装
 
-npm is bundled with [node](https://nodejs.org/en/download/).
+npm 已与 [node]((https://nodejs.org/en/download/)) 捆绑在一起进行安装。
 
-### Windows 系统电脑
+### Windows
 
-[Get the MSI](https://nodejs.org/en/download/).  npm is in it.
+[获取 MSI](https://nodejs.org/en/download/)。里面包含了 npm。
 
-### 苹果系统电脑
+### Mac
 
-[Get the pkg](https://nodejs.org/en/download/).  npm is in it.
+[获取 pkg](https://nodejs.org/en/download/)。里面包含了 npm。
 
-### 其他类型
+### 其他
 
-Run `make install`.  npm will be installed with node.
+运行 `make install`。npm 将于 node 一起被安装。
 
-If you want a more fancy pants install (a different version, customized paths, etc.) then read on.
+如果你想要一个更自由安装方式（不同的版本，自定义路径等），请继续阅读。
 
 ## Fancy Install (Unix)
 
 There's a pretty robust install script at <https://www.npmjs.com/install.sh>.  You can download that and run it.
 
-Here's an example using curl:
+下面是一个使用 curl 的例子：
 
 ```sh
 curl -L https://www.npmjs.com/install.sh | sh
@@ -55,7 +55,7 @@ curl -L https://www.npmjs.com/install.sh | sh
 
 ### Slightly Fancier
 
-You can set any npm configuration params with that script:
+你可以使用这个脚本设置任何 npm 配置参数：
 
 ```sh
 npm_config_prefix=/some/path sh install.sh
@@ -73,24 +73,24 @@ Get the code with git.  Use `make` to build the docs and do other stuff. If you 
 
 If you've got the npm source code, you can also semi-permanently set arbitrary config keys using the `./configure --key=val ...`, and then run npm commands by doing `node bin/npm-cli.js <command> <args>`.  (This is helpful for testing, or running stuff without actually installing npm itself.)
 
-## Windows Install or Upgrade
+## Windows 安装和升级
 
 Many improvements for Windows users have been made in npm 3 - you will have a better experience if you run a recent version of npm. To upgrade, either use [Microsoft's upgrade tool](https://github.com/felixrieseberg/npm-windows-upgrade), [download a new version of Node](https://nodejs.org/en/download/), or follow the Windows upgrade instructions in the [npm Troubleshooting Guide](./TROUBLESHOOTING.md).
 
 If that's not fancy enough for you, then you can fetch the code with git, and mess with it directly.
 
-## Installing on Cygwin
+## 在 Cygwin 安装
 
-No.
+不支持。
 
-## Uninstalling
+## 卸载
 
-So sad to see you go.
+很遗憾你会这么做。
 
 ```sh
 sudo npm uninstall npm -g
 ```
-Or, if that fails,
+如果失败了，你可以这样：
 
 ```sh
 sudo make uninstall
