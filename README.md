@@ -74,7 +74,7 @@ npm_debug=1 sh install.sh
 如果你有 npm 源码，你也可以使用 `./configure --key=val ...` 半永久性地设置任意配置键，然后通过 `node bin/npm-cli.js <command> <args>` 来运行 npm 命令。（这有助于测试或运行，而不需要实际安装 npm 自身。）
 
 ## Windows 安装和升级
-npm 3 对 Windows 用户进行了许多改进 - 如果运行最新版本的 npm，你将获得更好的体验。要升级，你可以使用 [Microsoft 的升级工具](https://github.com/felixrieseberg/npm-windows-upgrade)、[下载新版本的 Node](https://nodejs.org/en/download/) 或者按照 [npm 故障排除指南](./TROUBLESHOOTING.md)中的 Windows 升级说明进行操作。
+npm 3 对 Windows 用户进行了许多改进 - 如果运行最新版本的 npm，你将获得更好的体验。要升级，你可以使用 [Microsoft 的升级工具](https://github.com/felixrieseberg/npm-windows-upgrade)、[下载新版本的 Node](https://nodejs.org/en/download/) 或者按照 [npm 故障排除指南](https://github.com/npm/npm/blob/latest/TROUBLESHOOTING.md)中的 Windows 升级说明进行操作。
 
 如果这对你来说还不够自由，那么你可以用 git 来获取源码，并直接对其进行处理。
 
