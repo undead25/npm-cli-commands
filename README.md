@@ -4,7 +4,7 @@ npm(1) -- 一个 JavaScript 包管理器
 [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg)](https://travis-ci.org/npm/npm)
 
 > - 在线阅读：<https://undead25.gitbooks.io/npm-cli/content/>
-> - 对比更新：[Link](https://github.com/npm/npm/compare/latest...undead25:latest>)（这个方法比较蠢，欢迎你提供比较好的方法 🙂 ）
+> - 对比更新：[Link](https://github.com/npm/npm/compare/latest...undead25:latest)（这个方法比较蠢，欢迎你提供比较好的方法 🙂 ）
 
 
 ## 概要
