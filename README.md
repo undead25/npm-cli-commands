@@ -43,9 +43,9 @@ npm 已与 [node]((https://nodejs.org/en/download/)) 捆绑在一起进行安�
 
 如果你想要一个更自由安装方式（不同的版本，自定义路径等），请继续阅读。
 
-## Fancy Install (Unix)
+## 自由安装（Unix）
 
-There's a pretty robust install script at <https://www.npmjs.com/install.sh>.  You can download that and run it.
+在 <https://www.npmjs.com/install.sh> 上有一个非常强大的安装脚本。你可以下载并运行它。
 
 下面是一个使用 curl 的例子：
 
@@ -53,7 +53,7 @@ There's a pretty robust install script at <https://www.npmjs.com/install.sh>.  Y
 curl -L https://www.npmjs.com/install.sh | sh
 ```
 
-### Slightly Fancier
+### 有点自由
 
 你可以使用这个脚本设置任何 npm 配置参数：
 
@@ -61,23 +61,22 @@ curl -L https://www.npmjs.com/install.sh | sh
 npm_config_prefix=/some/path sh install.sh
 ```
 
-Or, you can run it in uber-debuggery mode:
+或者，你可以在超级调试模式下运行它：
 
 ```sh
 npm_debug=1 sh install.sh
 ```
 
-### Even Fancier
+### 更自由
 
-Get the code with git.  Use `make` to build the docs and do other stuff. If you plan on hacking on npm, `make link` is your friend.
+通过 git 获取源码。使用 `make` 来构建文档和其它的事情。如果你打算在 npm 上进行二次开发，可以使用 `make link`。
 
-If you've got the npm source code, you can also semi-permanently set arbitrary config keys using the `./configure --key=val ...`, and then run npm commands by doing `node bin/npm-cli.js <command> <args>`.  (This is helpful for testing, or running stuff without actually installing npm itself.)
+如果你有 npm 源码，你也可以使用 `./configure --key=val ...` 半永久性地设置任意配置键，然后通过 `node bin/npm-cli.js <command> <args>` 来运行 npm 命令。（这有助于测试或运行，而不需要实际安装 npm 自身。）
 
 ## Windows 安装和升级
+npm 3 对 Windows 用户进行了许多改进 - 如果运行最新版本的 npm，你将获得更好的体验。要升级，你可以使用 [Microsoft 的升级工具](https://github.com/felixrieseberg/npm-windows-upgrade)、[下载新版本的 Node](https://nodejs.org/en/download/) 或者按照 [npm 故障排除指南](./TROUBLESHOOTING.md)中的 Windows 升级说明进行操作。
 
-Many improvements for Windows users have been made in npm 3 - you will have a better experience if you run a recent version of npm. To upgrade, either use [Microsoft's upgrade tool](https://github.com/felixrieseberg/npm-windows-upgrade), [download a new version of Node](https://nodejs.org/en/download/), or follow the Windows upgrade instructions in the [npm Troubleshooting Guide](./TROUBLESHOOTING.md).
-
-If that's not fancy enough for you, then you can fetch the code with git, and mess with it directly.
+如果这对你来说还不够自由，那么你可以用 git 来获取源码，并直接对其进行处理。
 
 ## 在 Cygwin 安装
 
@@ -96,27 +95,26 @@ sudo npm uninstall npm -g
 sudo make uninstall
 ```
 
-## More Severe Uninstalling
+## More Severe Uninstalling 更彻底的卸载
 
-Usually, the above instructions are sufficient.  That will remove npm, but leave behind anything you've installed.
+通常情况下，上面的说明已经足够了。它们将删除 npm，但会保留所有你已经安装的包。
 
-If you would like to remove all the packages that you have installed, then you can use the `npm ls` command to find them, and then `npm rm` to remove them.
+如果你想删除所有你已经安装的包，那么你可以使用 `npm ls` 命令找到它们，然后通过 `npm rm` 来删除它们。
 
-To remove cruft left behind by npm 0.x, you can use the included `clean-old.sh` script file.  You can run it conveniently like this:
+要删除 npm 0.x 的残留，可以使用附带的 `clean-old.sh` 脚本文件。你可以像这样很方便地运行它：
 
 ```sh
 npm explore npm -g -- sh scripts/clean-old.sh
 ```
 
-npm uses two configuration files, one for per-user configs, and another
-for global (every-user) configs.  You can view them by doing:
+npm 使用两个配置文件，一个是用户配置，另一个是全局配置。你可以这样查看它们：
 
 ```sh
-npm config get userconfig   # defaults to ~/.npmrc
-npm config get globalconfig # defaults to /usr/local/etc/npmrc
+npm config get userconfig   # 默认是 ~/.npmrc
+npm config get globalconfig # 默认是 /usr/local/etc/npmrc
 ```
 
-Uninstalling npm does not remove configuration files by default.  You must remove them yourself manually if you want them gone.  Note that this means that future npm installs will not remember the settings that you have chosen.
+卸载 npm 默认不会删除配置文件，你必须手动删除它们。请注意，这意味着以后的 npm 安装将不会记住你已经选择了的设置。
 
 ## More Docs 更多文档
 
@@ -126,7 +124,7 @@ Uninstalling npm does not remove configuration files by default.  You must remov
 
 如果你是一个开发者，并且想用 npm 来发布程序，那你应该[阅读这个](https://docs.npmjs.com/misc/developers)。
 
-## BUGS
+## BUGS 错误
 
 当你发现问题时，请上报给我们：
 
