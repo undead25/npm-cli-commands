@@ -27,7 +27,7 @@ npm(1) -- 一个 JavaScript 包管理器
 
 ## 超级简易安装
 
-npm 已与 [node]((https://nodejs.org/en/download/)) 捆绑在一起进行安装。
+npm 已与 [node]((https://nodejs.org/en/download/)) 捆绑在一起进行安装。
 
 ### Windows
 
@@ -55,7 +55,7 @@ curl -L https://www.npmjs.com/install.sh | sh
 
 ### 有点自由
 
-你可以使用这个脚本设置任何 npm 配置参数：
+你可以使用这个脚本设置任何 npm 配置参数：
 
 ```sh
 npm_config_prefix=/some/path sh install.sh
